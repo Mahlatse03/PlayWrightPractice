@@ -1,3 +1,5 @@
+package aBasics;
+
 import com.microsoft.playwright.*;
 import org.testng.annotations.Test;
 
@@ -10,7 +12,8 @@ public class launchBrowser {
             Page page = context.newPage();
             page.navigate("https://www.ndosiautomation.co.za/");
             page.fill("#login-email", "md@gmail.com");
-
+            page.fill("#login-password", "emd12345");
+            //page.click;
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
